@@ -1,0 +1,40 @@
+body {
+    background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.row {
+    margin-top: 45px;
+}
+
+.login {
+    background-color: white;
+    border: 1px solid;
+    border-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 50%;
+    margin-top: 7%;
+    margin-left: 25%;
+    font-size: large;
+}
+
+label {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.footer {
+    margin-top: 3%;
+    text-align: center;
+    color: white;
+}
+
+.container-sm {
+    background: rgb(162, 160, 160);
+    border-radius: 10px;
+}

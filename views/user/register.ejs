@@ -1,0 +1,87 @@
+<% layout('layouts/boilerplate')%>
+
+    <head>
+        <link rel="stylesheet" href="/Sign up.css">
+        <title>Sign up Page</title>
+    </head>
+
+    <body>
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                    <div class="card shadow">
+                        <img src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title">Register</h5>
+                            <a href="/user/login">Login</a>
+                            <form id="form" action="../user/register" method="POST" enctype="multipart/form-data">
+                                <div class="alert alert-danger" role="alert" style="display: none;" id="alertUsername">
+                                    Username already exists
+                                    <button type="button" style="border: 0; float: right;" id="closeUserBtn">x</button>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="username">Username</label>
+                                    <input class="form-control" type="text" id="username" name="user[username]" required autofocus>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="alert alert-danger" role="alert" style="display: none;" id="alertEmail">
+                                    Email already taken
+                                    <button type="button" style="border: 0; float: right;" id="closeEmailBtn">x</button>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="email">Email</label>
+                                    <input class="form-control" type="email" id="email" name="user[email]" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="first_name">First name</label>
+                                    <input class="form-control" type="text" id="first_name" name="user[first_name]" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="last_name">Last name</label>
+                                    <input class="form-control" type="text" id="last_name" name="user[last_name]" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="alert alert-danger" role="alert" style="display: none;" id="alertPhone">
+                                    Phone number already taken
+                                    <button type="button" style="border: 0; float: right;" id="closePhoneBtn">x</button>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="phone_nb">Phone number</label>
+                                    <input class="form-control" type="number" id="phone_nb" name="user[phone_nb]" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="password">Password</label>
+                                    <input class="form-control" type="password" id="password" name="password" required>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-file custom-file">
+                                        <input type="file" class="form-file-input" id="image" name="image">
+                                        <label class="form-file-label" for="image">
+                                            <span class="form-file-text custom-file-label">Choose profile image</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button id="submitButton" class="btn btn-success btn-block">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="/verify.js"></script>

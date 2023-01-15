@@ -1,0 +1,46 @@
+<% layout('layouts/boilerplate')%>
+
+    <head>
+        <link rel="stylesheet" href="/Mysites.css">
+        <title>Your campsites</title>
+    </head>
+
+    <body>
+        <br>
+        <br>
+        <h1 style="color: brown; text-align: center; text-decoration: underline;">All sites</h1>
+        <table id="table" class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Description</th>
+                </tr>
+                <tbody class="table-hover">
+                    <% for (let site of sites) { %>
+                        <tr>
+                            <a href="/sites/show/<%=site._id%>"></a>
+                            <td style="background-color: white;">
+                                <strong><a href="/sites/<%=site._id%>">
+                                    <%= site.title %>
+                                </a></strong>
+                            </td>
+                            <td style="background-color: white;">
+                                <p>
+                                    <%= site.location %>
+                                </p>
+                            </td>
+                            <td style="background-color: white;">
+                                <p>
+                                    <%= site.description %>
+                                </p>
+                            </td>
+                            <% } %>
+                                </a>
+                        </tr>
+            </thead>
+            <%= success %>
+        </table>
+    </body>
+
+    </html>

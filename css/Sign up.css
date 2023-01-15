@@ -1,0 +1,30 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.row {
+    margin-top: 45px;
+}
+
+label {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}

@@ -1,0 +1,16 @@
+#circle {
+    background-size: cover;
+    border-radius: 40% 40% 40% 40%;
+    width: 40px;
+    height: 40px;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+    background-color: lightgrey;
+    opacity: 0.8;
+}

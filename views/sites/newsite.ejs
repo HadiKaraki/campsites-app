@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate')%>
+
+    <head>
+        <link rel="stylesheet" href="/Newsite.css">
+        <title>New campsite</title>
+    </head>
+
+    <body>
+        <div class="container d-flex justify-content-center align-items-center mt-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                    <div class="card shadow">
+                        <img src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="" class="card-img-top" />
+                        <div class="card-body">
+                            <h5 class="card-title">Provide details</h5>
+                            <form action="/sites/newsite" method="POST" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <label class="form-label" for="username">Title</label>
+                                    <input class="form-control" type="text" id="title" name="site[title]" placeholder="Name of site">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="location">Location:</label>
+                                    <input class="form-control" type="text" id="location" name="site[location]" placeholder="Paris, France">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="price">Site Price:</label>
+                                    <input class="form-control" type="text" id="price" name="site[price]" placeholder="Per night">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="description">Description:</label>
+                                    <input class="form-control" type="text" id="description" name="site[description]">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="form-file custom-file" style="cursor: pointer;">
+                                        <input type="file" class="form-file-input" id="image" name="image" multiple>
+                                        <label class="form-file-label" for="image">
+                                            <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    </body>
+    </div>

@@ -1,0 +1,44 @@
+{
+    "name": "application",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@mapbox/mapbox-sdk": "^0.14.0",
+        "bcrypt": "^5.1.0",
+        "bootstrap": "^5.2.3",
+        "cloudinary": "^1.33.0",
+        "connect-flash": "^0.1.1",
+        "connect-mongo": "^4.6.0",
+        "dotenv": "^16.0.3",
+        "ejs": "^3.1.8",
+        "ejs-mate": "^4.0.0",
+        "express": "^4.18.2",
+        "express-session": "^1.17.3",
+        "helmet": "^6.0.1",
+        "joi": "^17.7.0",
+        "jsonwebtoken": "^9.0.0",
+        "method-override": "^3.0.0",
+        "mongodb": "^4.13.0",
+        "mongoose": "^6.8.2",
+        "multer": "^1.4.4",
+        "multer-storage-cloudinary": "^4.0.0",
+        "nodemailer": "^6.8.0",
+        "nodemon": "^2.0.20",
+        "passport": "^0.6.0",
+        "passport-local": "^1.0.0",
+        "passport-local-mongoose": "^7.1.2",
+        "permissions-policy": "^0.6.0",
+        "sanitize-html": "^2.8.1",
+        "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "@types/mapbox__mapbox-sdk": "^0.13.4"
+    }
+}

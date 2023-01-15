@@ -1,0 +1,52 @@
+body {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Segoe UI", sans-serif;
+    animation: slideBg 50s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideBg {
+    0% {
+        background-image: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url("/show2.jpg");
+    }
+    25% {
+        background-image: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url("/home.jpg");
+    }
+    50% {
+        background-image: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url("/home2.jpg");
+    }
+    75% {
+        background-image: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url("/show.jpg");
+    }
+    100% {
+        background-image: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url("./background.jpg");
+    }
+}
+
+.header1 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    margin-top: 13%;
+    margin-bottom: 40px;
+}
+
+#search-icon {
+    color: silver;
+}
+
+#mapLink {
+    padding: 8px 15px;
+    background-color: #0492C2;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+footer {
+    position: fixed !important;
+}

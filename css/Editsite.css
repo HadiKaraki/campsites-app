@@ -1,0 +1,11 @@
+body {
+    background-image: url('/show.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.row {
+    margin-top: 45px;
+}

@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(rgba(10, 10, 10, 0.5), rgba(10, 10, 10, 0.5)), url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.row {
+    margin-top: 45px;
+}
+
+label {
+    font-weight: bold;
+    text-decoration: underline;
+}

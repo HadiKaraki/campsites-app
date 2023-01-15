@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light" style="background-color: #e3f2fd; box-shadow: 3px 3px 4px #888888;">
+    <div class="mx-auto order-0">
+        <a class="navbar-brand mx-auto" href="/user/initial">
+            <img src="/Logo1.png" alt="" width="80" height="45" class="d-inline-block align-text-top">
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="/sites/map" class="nav-link active">Map</a>
+            </li>
+            <li class="nav-item">
+                <% if(!currentUser) { %>
+                    <a href="/user/register" class="nav-link active">Sign up</a>
+            </li>
+            <% } %>
+                <% if(!currentUser) {%>
+                    <li class="nav-item">
+                        <a href="/user/login" class="nav-link active">Login</a>
+                    </li>
+                    <% } else {%>
+                        <li class="nav-item">
+                            <a href="/user/home" class="nav-link active">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/sites/newsite">New</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/sites/mysites">Sites</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/user/logout" class="nav-link active">Logout</a>
+                        </li>
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="/user/account">
+                                <% if(currentUser && currentUser.profile.url>'') {%>
+                                    <img src="<%=currentUser.profile.url %>" id="circle" class="d-inline-block align-text-top rounded-circle">
+                                    <% } else {%>
+                                        <img src="/empty_profile.png" id="circle" class="d-inline-block align-text-top">
+                                        <% } %>
+                            </a>
+                        </div>
+                        <% } %>
+        </ul>
+    </div>
+</nav>

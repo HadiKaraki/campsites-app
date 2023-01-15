@@ -1,0 +1,33 @@
+body {
+    background-image: url('/show.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Segoe UI", sans-serif;
+}
+
+#container {
+    background-color: white;
+    padding: 10px;
+    padding-top: 15px;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 15px;
+}
+
+.carousel-inner img {
+    max-height: 385px;
+}
+
+#map {
+    border: 0.1px solid black;
+}
+
+@media (max-width: 768px) {
+    #container {
+        grid-template-columns: 1fr;
+    }
+}

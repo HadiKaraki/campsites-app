@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn {
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    width: 5.5%;
+    height: 40px;
+    left: 47%;
+    margin-top: 30px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    font-size: 11.5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+#center {
+    font-weight: bold;
+    color: black;
+}
+
+footer {
+    display: none !important;
+}

@@ -1,0 +1,90 @@
+<% layout('layouts/boilerplate')%>
+
+    <head>
+        <link rel="stylesheet" href="/Account.css">
+    </head>
+    <div class="container d-flex justify-content-center align-items-center mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4">
+                <div class="card shadow">
+                    <img src="https://images.unsplash.com/photo-1571863533956-01c88e79957e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80" alt="" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title">Change info</h5>
+                        <form id="form" action="/user/account" method="POST" class="validated-form" novalidate enctype="multipart/form-data">
+                            <div class="alert alert-danger" role="alert" style="display: none;" id="alertUsername">
+                                Username already exists
+                                <button type="button" style="border: 0; float: right;" id="closeUserBtn">x</button>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="username">Change username</label>
+                                <input class="form-control" type="text" id="username" name="user[username]" value="<%= currentUser.username %>" autofocus required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <!-- HIDDEN FOR VERIFY -->
+                            <div class="alert alert-danger" role="alert" style="display: none;" id="alertEmail">
+                                Email already taken
+                                <button type="button" style="border: 0; float: right;" id="closeEmailBtn">x</button>
+                            </div>
+                            <div class="mb-3" style="display: none;">
+                                <label class="form-label" for="email">Email</label>
+                                <input class="form-control" type="email" id="email" name="user[email]" value="<%= currentUser.email %>" required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="first_name">Change first name</label>
+                                <input class="form-control" type="text" id="first_name" name="user[first_name]" value="<%= currentUser.first_name %>" autofocus required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="last_name">Change last name</label>
+                                <input class="form-control" type="text" id="last_name" name="user[last_name]" value="<%= currentUser.last_name %>" autofocus required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="alert alert-danger" role="alert" style="display: none;" id="alertPhone">
+                                Phone number already taken
+                                <button type="button" style="border: 0; float: right;" id="closePhoneBtn">x</button>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="phone_nb">Change phone number</label>
+                                <input class="form-control" type="number" id="phone_nb" name="user[phone_nb]" value="<%= currentUser.phone_nb %>" autofocus required>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <% if(currentUser.profile.url>'') {%>
+                                <div class="mb-3">
+                                    <img src="<%=currentUser.profile.thumbnail %>" class="img-thumbnail">
+                                    <div class="form-check-inline">
+                                        <input type="checkbox" id="profileImage" name="deleteProfile" value="<%=currentUser.profile.filename%>">
+                                    </div>
+                                    <label for="profileImage">Delete?</label>
+                                </div>
+                                <% } else {%>
+                                    <div class="mb-3">
+                                        <div class="form-file custom-file">
+                                            <input type="file" class="form-file-input" id="image" name="image">
+                                            <label class="form-file-label" for="image">
+                                        <span class="form-file-text custom-file-label">Add profile picture</span>
+                                    </label>
+                                        </div>
+                                    </div>
+                                    <% } %>
+                                        <button id="submitButton" class="btn btn-success btn-block">Update account</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spinner-border text-primary" id="spinner" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <script src="/verify.js"></script>
